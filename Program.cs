@@ -10,6 +10,7 @@ namespace AgeAverage
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
