@@ -165,6 +165,17 @@ namespace AgeAverage
             }
             return employeesArray;
         }
+
+        static double getAgeAverage(Employee [] Employees) {
+            int sumTotalAges = 0;
+            double average = 0.0;
+            for (int j = 0; j < Employees.Length; j++)
+            {
+                sumTotalAges += Employees[j].Age;
+            }
+            average = sumTotalAges / Employees.Length;
+            return average;
+        }
         static void Main(string[] args)
         {
             //indique que hace el programa
@@ -176,12 +187,9 @@ namespace AgeAverage
             //capture la informacion de empleados
             Employee[] Employees = getEmployeeInformation(numberOfEmployees);
             //muestre cada edad de cada empleado capturado
-            for(int j=0;j<Employees.Length; j++)
-            {
-                Console.WriteLine(Employees[j].Name);
-                Console.WriteLine(Employees[j].Age);
-                Console.WriteLine("\n");
-            }
+
+            double average = getAgeAverage(Employees);
+            Console.WriteLine("El promedio de edad de edad de los empleados es: " + average);
             Console.WriteLine("Presione enter para finalizar...");
             Console.ReadLine();
         }
