@@ -180,16 +180,18 @@ namespace AgeAverage
         {
             //indique que hace el programa
             Console.Write("Este programa calcula el promedio de edades de un numero de empleados\n\n");
+            
             //variable para guardar el numero de empleados
             int numberOfEmployees = getNumberOfEmployees();
-            Console.WriteLine("numberEmployee:" + numberOfEmployees);
+            Console.WriteLine("\n");
 
             //capture la informacion de empleados
             Employee[] Employees = getEmployeeInformation(numberOfEmployees);
             //muestre cada edad de cada empleado capturado
 
+            //obtenga el promedio de la edades de los empleados y presente este en pantalla
             double average = getAgeAverage(Employees);
-            Console.WriteLine("El promedio de edad de edad de los empleados es: " + average);
+            Console.WriteLine("El promedio de edad de los empleados es: {0:N2}",average);
             Console.WriteLine("Presione enter para finalizar...");
             Console.ReadLine();
         }
